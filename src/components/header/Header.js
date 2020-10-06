@@ -5,8 +5,11 @@ import {Avatar} from "@material-ui/core";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import {useStateValue} from '../../contextAPI/stateProvider';
 
 function Header() {
+
+    const [{user}] =  useStateValue();
     return (
         <div className = "header">
 
@@ -15,8 +18,8 @@ function Header() {
                 {/* Avatar for the loged in user */}
                 <Avatar
                     className="header_avater"
-                    // alt={user?.displayName}
-                    // src = { user?.photoURL}
+                    alt={user?.displayName}
+                    src = { user?.photoURL}
                 />
                 {/* Time icon */}
                 <AccessTimeIcon/>

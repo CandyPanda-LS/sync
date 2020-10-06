@@ -17,11 +17,13 @@ import AddIcon from '@material-ui/icons/Add';
 
 import SidebarOptions from "./SidebarOptions/SidebarOptions"
 import db from './../../firebase';
+import {useStateValue} from '../../contextAPI/stateProvider';
 
 
 function Sidebar() {
 
     const [channels, setChannels] = useState([]);
+    const [{user}] = useStateValue();
 
     useEffect(() => {
     //run this code once, after the side bar component is rendered
@@ -44,7 +46,7 @@ function Sidebar() {
                     <h2>Sync space</h2>
                     <h3>
                         <FiberManualRecordIcon />
-                        Lasal Hettiarachchi
+                        {user?.displayName}
                     </h3>
                 </div>
                 <CreateIcon />
