@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import Header from "./components/header/Header.js";
 import Sidebar from "./components/sidebar/Sidebar.js"
+import Chat from "./components/chat/Chat"
+import {BrowserRouter as Router, Switch , Route} from "react-router-dom"
 
 function App() {
   return (
   <div className="app">
+    <Router>
       {/* Header component */}
       <Header/>
 
@@ -18,8 +21,20 @@ function App() {
         {/* sidebar component end */}
 
         {/* React router -> chat screen */}
+          <Switch>
+            <Route path= "/room/:roomID">
+              <Chat/>
+            </Route>
+            <Route path="/">
+              <h2>
+                welcome
+              </h2>
+            </Route>
+          </Switch>
+
         {/* chat screen end */}
       </div>
+    </Router>
     </div>
   );
 }

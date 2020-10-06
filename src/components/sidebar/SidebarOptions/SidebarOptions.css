@@ -4,7 +4,25 @@
     padding-left: 2px;
     cursor: pointer;
 }
-
+.sidebarOption > h3{
+    font-size: small;
+}
 .sidebarOption:hover{
     background-color: #340e36;
+    opacity: 0.9;
+}
+
+.sidebarOption_icon{
+    padding: 10px;
+    font-size: 15px !important;
+}
+
+.sidebarOptions__channel{
+    padding: 10px;
+}
+.sidebarOptions__hash{
+    padding: 12px;
+}
+.sidebarOptions{
+    font-weight: 500;
 }
