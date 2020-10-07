@@ -30,7 +30,6 @@ function Chat() {
 
     }, [roomID])
 
-    console.log(roomMessages);
 
     return (
         <div className="chat">

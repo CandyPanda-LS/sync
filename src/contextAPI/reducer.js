@@ -1,7 +1,7 @@
 import {Switch} from "@material-ui/core";
 
 export const initialState = {
-    user:"sonny",
+    user:"a",
 }
 
 export const actionTypes = {
